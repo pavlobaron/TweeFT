@@ -32,6 +32,8 @@ done. Now, the receiver only needs to wait until he gets the final chunk in some
 account's DM. Then, the receiver sends to the sender an acknowledgement that it has received
 the whole file.
 
-In case of errors or timeouts, each side (sender and receiver) will send cancelation DMs.
+In case of errors or timeouts, each side (sender and receiver) will send cancelation DMs. TweeFT
+will also have to deal with Twiiter limits for maximum tweets per hour per account, so some caps
+will need to be done sometimes.
 
 That's it.
