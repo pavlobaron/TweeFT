@@ -1,4 +1,4 @@
-== TweeFT - Twitter based File Transfer
+TweeFT - Twitter based File Transfer
 
 With TweeFT one can use Twitter's direct messages to transfer files.
 
