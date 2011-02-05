@@ -7,17 +7,19 @@ character and rate limits. What TweeFT does to overcome some of these these limi
 use multiple accounts on both ends, sender and receiver. And it's a nice experiment :)
 
 The sender and the receiver accounts must be friends and thus be able to send each other
-direct messages. Furthermore, one needs those "worker" accounts which will participate
-in file transfer.
+direct messages. Furthermore, one needs some "worker" accounts which will participate
+in file transfer. These worker accounts shouldn't protect their tweets since TweeFT
+directyl and automatically creates friendships without any "third" media like email.
 
 In the handshake phase, the sender tells the receiver that it wants to send a file with a
-given name. The receiver tells the sender a unique key to use for the transfer as well as
-the number of his worker accounts. The sender, in a loop, sends to the receiver all names
-of its worker accounts. The receiver, in a loop, sends from his own worker accounts
-friendship requests to the sender's worker accounts. The sender all these requests or
-ignores them if the friendships are already established. The sender knows the overall number
-of firendship requests he has to confirm, so he waits until they all are done. Then, the
-handshake is done. We are ready to transfer the file.
+given name and a unique key it uses for transfer. The receiver tells the sender a unique
+key it uses for the transfer. Then, in several DMs. the receiver tells the sender the names
+of all his worker accounts. The sender creates friendships from all his worker accounts with
+all worker accounts of the receiver. Then, the sender, in several DMs, sends to the receiver
+all names of its worker accounts. The receiver creates friendships from his own worker accounts
+with all sender's worker accounts. Of course, if friendships on both ends are already existing,
+they will not be touched anyhow. After all that, the handshake is done. We are ready to transfer
+the file.
 
 In the transfer phase, the sender cuts up the file into a reasonable number of chunks. This
 is done based upon the nuber of worker accounts (sender and receiver), Twitter limits (140
@@ -26,6 +28,10 @@ information such as unique transfer key and chunk number. The sender sends to th
 DM containing the overall number of chunks it will get and starts sending the chunks to the
 receiver's worker accounts from his own worker accounts. Depending on the size of the file,
 the transfer could take weeks or might even never finish :)
+
+Again, it is important to understand that each side uses its own unique key which the other
+side marks every DM with so multiple transfers from and to different senders nd receiver can
+be easily distinguished. 
 
 After the sender has sent the last chunk, he sends to the receiver the final DM telling he's
 done. Now, the receiver only needs to wait until he gets the final chunk in some worker
