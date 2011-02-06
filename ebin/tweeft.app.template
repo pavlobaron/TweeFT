@@ -1,0 +1,19 @@
+{application, tweeft, [
+        {description, "TweeFT - Twitter based File Transfer"},
+        {vsn, "0.1"},
+        {modules, []},
+        {registered, []},
+        {applications, [kernel, stdlib]},
+        {mod, {tweeft, []}},
+	{env, [
+	      {sender, [
+		     {account, "sender", "secret"},
+		     {workers, [{"worker1", "secret"},
+		     	       {"worker2", "secret"}]}
+		     ]},
+	      {receiver, [
+		     {account, "receiver", "secret"},
+		     {workers, [{"worker3", "secret"},
+		     	       {"worker4", "secret"}]}
+		     ]}
+]}]}.
