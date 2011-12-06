@@ -9,7 +9,7 @@ use multiple accounts on both ends, sender and receiver. And it's a nice experim
 The sender and the receiver accounts must be friends and thus be able to send each other
 direct messages. Furthermore, one needs some "worker" accounts which will participate
 in file transfer. These worker accounts shouldn't protect their tweets since TweeFT
-directyl and automatically creates friendships without any "third" media like email.
+directly and automatically creates friendships without any "third" media like email.
 
 In the handshake phase, the sender tells the receiver that it wants to send a file with a
 given name and a unique key it uses for transfer. The receiver tells the sender a unique
@@ -41,5 +41,7 @@ the whole file.
 In case of errors or timeouts, each side (sender and receiver) will send cancelation DMs. TweeFT
 will also have to deal with Twiiter limits for maximum tweets per hour per account, so some caps
 will need to be done sometimes.
+
+Then, there is of course the integeration. The question is if it would be possible to seamlessly integrate TweeFT into the network stack so we could use a simple FTP client. The first step on the way there will be the inets integration.
 
 That's it.
